@@ -3,7 +3,8 @@
 
 namespace Blast {
     class Engine {
-        
+    public:
+        Engine();
     };
 }
 

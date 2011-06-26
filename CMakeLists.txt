@@ -20,24 +20,5 @@ if (APPLE)
   set (EXTRA_LIBS ${EXTRA_LIBS} "-framework Cocoa")
 endif()
 
-# Get the source list
+# Setup the source
 add_subdirectory (src)
-
-# Directories
-include_directories (
-  ${CMAKE_CURRENT_SOURCE_DIR}/src
-  ${SDL_FOLDER}/include
-)
-
-# Add the target
-add_library (blast SHARED
-  ${SOURCES}
-  ${HEADERS}
-)
-target_link_libraries (
-  blast
-  ${OPENGL_LIBRARIES}
-  ${SDL_LIBRARY}
-  ${SDLMAIN_LIBRARY}
-  ${EXTRA_LIBS}
-)
