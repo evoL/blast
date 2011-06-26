@@ -1,5 +1,9 @@
 #include "Engine.h"
 
 namespace Blast {
-    Engine::Engine() {}
+    using namespace std;
+    
+    Engine::Engine() {
+        cout << "Hello World" << endl;
+    }
 }
