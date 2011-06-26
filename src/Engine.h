@@ -5,6 +5,8 @@ namespace Blast {
     class Engine {
     public:
         Engine();
+        
+        void test();
     };
 }
 

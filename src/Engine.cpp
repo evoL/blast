@@ -4,7 +4,8 @@
 namespace Blast {
     using namespace std;
     
-    Engine::Engine() {
-        cout << "Hello World" << endl;
+    Engine::Engine() {}
+    void Engine::test() {
+         cout << "Hello World" << endl;
     }
 }
