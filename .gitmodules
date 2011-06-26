@@ -1,0 +1,3 @@
+[submodule "libs/sdl-1.3"]
+	path = libs/sdl-1.3
+	url = git://github.com/evoL/SDL.git
