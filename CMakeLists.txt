@@ -21,4 +21,6 @@ if (APPLE)
 endif()
 
 # Setup the source
+set (LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR})
+
 add_subdirectory (src)
