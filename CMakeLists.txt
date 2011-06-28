@@ -31,7 +31,7 @@ include_directories (
 )
 
 # Add the target
-add_library (blast SHARED
+add_library (blast STATIC #SHARED
   ${SOURCES}
   ${RANDOMHEADERS}
   ${HEADERS}
