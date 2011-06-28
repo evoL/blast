@@ -1,10 +1,6 @@
 cmake_minimum_required (VERSION 2.8)
 project (Blast)
 
-# Put the path to Visual Studio here!
-set (VS_PATH '')
-# OK, please don't mess with the rest (unless you know what you're doing)
-
 # Setup the libraries
 add_subdirectory (libs)
 
@@ -23,4 +19,27 @@ endif()
 # Setup the source
 set (LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR})
 
-add_subdirectory (src)
+file (GLOB HEADERS "include/*.h")
+file (GLOB RANDOMHEADERS "src/*.h")
+file (GLOB SOURCES "src/*.cpp")
+
+
+# Directories
+include_directories (
+  ${PROJECT_SOURCE_DIR}/include
+  ${SDL_FOLDER}/include
+)
+
+# Add the target
+add_library (blast SHARED
+  ${SOURCES}
+  ${RANDOMHEADERS}
+  ${HEADERS}
+)
+target_link_libraries (
+  blast
+  ${OPENGL_LIBRARIES}
+  ${SDL_LIBRARY}
+  ${SDLMAIN_LIBRARY}
+  ${EXTRA_LIBS}
+)
