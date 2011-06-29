@@ -28,6 +28,7 @@ file (GLOB SOURCES "src/*.cpp")
 include_directories (
   ${PROJECT_SOURCE_DIR}/include
   ${SDL_FOLDER}/include
+  ${GLEW_INCLUDE_PATH}
 )
 
 # Add the target
@@ -39,6 +40,7 @@ add_library (blast STATIC #SHARED
 target_link_libraries (
   blast
   ${OPENGL_LIBRARIES}
+  ${GLEW_LIBRARY}
   ${SDL_LIBRARY}
   ${SDLMAIN_LIBRARY}
   ${EXTRA_LIBS}
