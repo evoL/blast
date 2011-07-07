@@ -37,8 +37,18 @@ add_library (blast STATIC #SHARED
   ${RANDOMHEADERS}
   ${HEADERS}
 )
+add_executable (demo demo.cpp)
+
 target_link_libraries (
   blast
+  ${OPENGL_LIBRARIES}
+  ${GLEW_LIBRARY}
+  ${SDL_LIBRARY}
+  ${SDLMAIN_LIBRARY}
+  ${EXTRA_LIBS}
+)
+target_link_libraries (
+  demo
   ${OPENGL_LIBRARIES}
   ${GLEW_LIBRARY}
   ${SDL_LIBRARY}
